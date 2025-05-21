@@ -11,6 +11,15 @@ def isBalanced(s: str) -> bool:
             stack.pop()
     return not stack
 
+examples = [
+    "([]){}",       
+    "([{}])",       
+    "([)]",         
+    "((()",         
+    "",             
+    "{[()]}",      
+    "[(])",         
+]
 
-print(isBalanced("([]{})"))   # True
-print(isBalanced("[({)]"))    # False
+for e in examples:
+    print(f"{e} → {isBalanced(e)}")
